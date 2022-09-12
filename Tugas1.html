@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tugas 1 Javascript</title>
 </head>
 <body>
     
+    <script lang="javascript">
+    
+    // variabel pokok
+    var pegawai = "Ridwan"
+    var jabatan = "Manager"
+    var statusPeg ="menikah"
+    
+    // gaji pokok
+    if (jabatan == 'Manager') {
+        gapok = 15000000;
+    } else if (jabatan == 'Asisten') {
+        gapok = 10000000;
+    } else {
+        gapok = 5000000;
+    }
+
+    // Tunjangan Jabatan
+    let tunjab = gapok * 0.15;
+
+    // BPJS
+    let bpjs = gapok * 0.1;
+
+    // Tunjangan Menikah
+    let tunmen = (statusPeg == 'menikah') ? gapok * 0.2 : 0;
+
+    // Total
+    let total = gapok + tunjab + bpjs + tunmen;
+    
+    </script>
+
+    <h1>Data Pegawai</h1>
+
+    <p>Pegawai: <script>document.write(pegawai)</script></p>
+    <p>Jabatan: <script>document.write(jabatan)</script></p>
+    <p>Status: <script>document.write(statusPeg)</script></p>
+    <p>Gaji Pokok: Rp <script>document.write(gapok)</script></p>
+    <table border="1" cellpadding="10" cellspacing="0" width="30%">
+        <thead>
+            <tr bgcolor="cadetblue">
+                <th>
+                    Data
+                </th>
+                <th>
+                    Jumlah
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Tunjangan Jabatan
+                </td>
+                <td>
+                    Rp <script>document.write(tunjab)</script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    BPJS
+                </td>
+                <td>
+                    Rp <script>document.write(bpjs)</script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tunjangan Menikah
+                </td>
+                <td>
+                    Rp <script>document.write(tunmen)</script>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr bgcolor="orange">
+                <td style="text-align: right;">
+                    Total Gaji: 
+                </td>
+                <td>
+                    Rp <script>document.write(total)</script>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 Javascript</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Data Pegawai</h1>
+
+    <table cellpadding="5" cellspacing="0" width="80%" align="center">
+        <thead>
+            <tr bgcolor="mediumseagreen">
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>JABATAN</th>
+                <th>AGAMA</th>
+                <th>GAJI POKOK</th>
+                <th>TUNJANGAN JABATAN</th>
+                <th>TUNJANGAN KESEHATAN</th>
+                <th>GAJI KOTOR</th>
+                <th>ZAKAT PROFESI</th>
+                <th>TAKE HOME PAY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script lang="javascript">
+
+                var no;
+                for (no = 1; no <= 100; no++) {
+                    // WARNA
+                    warna = (no % 2 == 0) ? 'aqua' : 'yellow';
+
+                    // AGAMA
+                    agama = (no % 2 == 0) ? 'NonMuslim' : 'Muslim';
+
+                    // JABATAN
+                    if (no <= 25) {
+                        jabatan = 'Manager';
+                    } else if (no >= 26 && no <= 50) {
+                        jabatan = 'Asisten Manager';
+                    } else if (no >= 51 && no <= 75) {
+                        jabatan = 'Supervisor';
+                    } else if (no >= 76 && no <= 100) {
+                        jabatan = 'Staff';
+                    }
+
+                    // GAJI POKOK
+                    switch (jabatan) {
+                        case "Manager": gapok = 15000000; break;
+                        case "Asisten Manager": gapok = 10000000; break;
+                        case "Supervisor": gapok = 7000000; break;
+                        case "Staff": gapok = 4000000; break;
+                        default: gapok = 0; break;
+                    }
+
+                    // TUNJANGAN JABATAN
+                    let tunjab = gapok * 0.2;
+
+                    // TUNJANGAN KESEHATAN
+                    let tunkes = gapok * 0.1;
+
+                    // GAJO KOTOR
+                    let gator = gapok + tunjab + tunkes;
+
+                    // ZAKAT PROFESI
+                    if (agama == 'Muslim' && gator >= 7000000) {
+                        zaprof = gator * 0.025;
+                    } else {
+                        zaprof = 0;
+                    }
+
+                    // TAKE HOME PAY
+                    let thp = gator - zaprof;
+                    
+                    // PRINT
+                    document.write(`
+                    <tr bgcolor="${warna}" style="text-align: center;">
+                        <td>${no}</td>
+                        <td>Pegawai${no}</td>
+                        <td>${jabatan}</td>
+                        <td>${agama}</td>
+                        <td>${gapok}</td>
+                        <td>${tunjab}</td>
+                        <td>${tunkes}</td>
+                        <td>${gator}</td>
+                        <td>${zaprof}</td>
+                        <td>${thp}</td>
+                    </tr>
+                    `)
+                }
+
+                </script>
+        </tbody>
+    </table>
+</body>
+</html>

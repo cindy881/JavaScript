@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" width="30%">
+        <thead>
+            <tr bgcolor="cadetblue">
+                <th>No</th>
+                <th>NAMA</th>
+                <th>ALAMAT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script lang="javascript">
+                var no, warna;
+                for (no = 1; no <= 100; no++) {
+                    warna = (no % 2 == 0) ? 'yellow' : 'aqua';
+                    document.write(`
+                    <tr bgcolor="${warna}">
+                        <td>${no}</td>
+                        <td>Mahasiswa${no}</td>
+                        <td>Jl. Bunga No. ${no}</td>
+                    </tr>
+                    `)
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>

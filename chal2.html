@@ -1,0 +1,37 @@
+<form action="">
+    Tanggal lahir:
+    <br>
+    <select name="tgl" id="">
+        <script lang="javascript">
+            for (tgl = 1; tgl <= 31 ; tgl++) {
+                document.write(`
+                <option value="${tgl}">${tgl}</option>
+                `);
+            }
+        </script>
+    </select>
+    <select name="bln" id="">
+        <script lang="javascript">
+            for (bln = 1; bln <= 12 ; bln++) {
+                document.write(`
+                <option value="${bln}">${bln}</option>
+                `);
+            }
+        </script>
+    </select>
+    <select name="thn" id="">
+        <script lang="javascript">
+            var thn_now = new Date().getFullYear();
+            var thn_max = thn_now - 35;
+            var thn_min = thn_now - 17;
+            while (thn_max <= thn_min) {
+                document.write(`
+                <option value="${thn_max}">${thn_max}</option>
+                `);
+                thn_max++
+            }
+            // for (thn = 2005; thn >= 1987 ; thn--) {
+            // }
+        </script>
+    </select>
+</form>

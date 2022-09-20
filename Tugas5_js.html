@@ -23,15 +23,15 @@
             <div class="invalid-feedback" data-sb-feedback="angka2:required">Angka 2 is required.</div>
         </div>
         <div class="form-floating mb-3">
-            <input class="form-control" name="total" type="text" placeholder="" data-sb-validations="" value="" disabled/>
+            <input class="form-control" name="hasil" type="text" placeholder="" data-sb-validations="" value="" disabled/>
             <label for=""></label>
         </div>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg" value="btn_tambah" name="tombol" onclick="hitung()" type="button" >+</button>
-            <button class="btn btn-info btn-lg" value="btn_kurang" name="tombol" onclick="hitung()" type="button">-</button>
-            <button class="btn btn-success btn-lg" value="btn_kali" name="tombol" onclick="hitung()" type="button">x</button>
-            <button class="btn btn-warning btn-lg" value="btn_bagi" name="tombol" onclick="hitung()" type="button">/</button>
-            <button class="btn btn-danger btn-lg" value="btn_pangkat" name="tombol" onclick="hitung()" type="button">^</button>
+            <button class="btn btn-primary btn-lg" value="btn_tambah" name="tombol" onclick="hitung('tambah')" type="button" >+</button>
+            <button class="btn btn-info btn-lg" value="btn_kurang" name="tombol" onclick="hitung('kurang')" type="button">-</button>
+            <button class="btn btn-success btn-lg" value="btn_kali" name="tombol" onclick="hitung('kali')" type="button">x</button>
+            <button class="btn btn-warning btn-lg" value="btn_bagi" name="tombol" onclick="hitung('bagi')" type="button">/</button>
+            <button class="btn btn-danger btn-lg" value="btn_pangkat" name="tombol" onclick="hitung('pangkat')" type="button">^</button>
         </div>
     </form>
 </div>
